@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2f01cb66-03dd-4b33-b95f-9c1267b7e136" name="Default Changelist" comment="" />
+    <list default="true" id="2f01cb66-03dd-4b33-b95f-9c1267b7e136" name="Default Changelist" comment="updating DB">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/DBConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Repository/DBConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/RoomFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/RoomFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/UserFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/UserFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Repository/IRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Repository/IRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Repository/MySQLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Repository/MySQLRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Repository/RepositoryFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Repository/RepositoryFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/RepositoryV2/IRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/RepositoryV2/UserModelRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/ReservationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ReservationModel.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +26,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1YuO5pqnL37IxO1KZ70M8LVsEwa" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -24,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Java-MVC-Repository-Pattern/javaRepositoryPattern/repopattern" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -59,6 +73,7 @@
       <updated>1583788832077</updated>
       <workItem from="1583788835021" duration="590000" />
       <workItem from="1584979070335" duration="435000" />
+      <workItem from="1585664654819" duration="4285000" />
     </task>
     <servers />
   </component>
@@ -67,7 +82,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding base project" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding base project" />
+    <MESSAGE value="updating DB" />
+    <option name="LAST_COMMIT_MESSAGE" value="updating DB" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1585340894623">
@@ -82,6 +98,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585338212474" />
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1585674854865">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585674854865" />
     <state x="735" y="303" key="DetectedRootsChooserDialog" timestamp="1585315733557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -130,10 +150,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585315813095" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1584979071283">
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585664670818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584979071283" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585664670818" />
     <state x="1270" y="314" key="svn.repositoryBrowser" timestamp="1584979445819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

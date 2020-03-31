@@ -1,4 +1,4 @@
-package DatabaseManager;
+package DatabaseManager.Repository;
 
 public class DBConfig {
 

@@ -1,6 +1,6 @@
 package DatabaseManager.Factory.Models;
 
-import DatabaseManager.DBConfig;
+import DatabaseManager.Repository.DBConfig;
 import DatabaseManager.Factory.IModel;
 import DatabaseManager.Factory.ModelFactory;
 import DatabaseManager.Repository.IRepository;
@@ -31,7 +31,8 @@ public class RoomFactory extends ModelFactory implements IModel<RoomModel> {
     }
 
     @Override
-    public UserModel findByParameters(String... parameters) throws Exception {
+    public RoomModel findByParameters(String... parameters) throws Exception {
+        /*
         resultSet = null;
         repository = RepositoryFactory.getRepository(DBConfig.getDatabaseConfig());
         query = "SELECT user_name, password, first_name, last_name, email_address, loyalty_level FROM User " +
@@ -42,7 +43,7 @@ public class RoomFactory extends ModelFactory implements IModel<RoomModel> {
             ex.printStackTrace();
             return null;
         }
-        UserModel user = new UserModel();
+        RoomModel room = new RoomModel();
         while (resultSet.next()){
             user.setUserName(parameters[0]);
             user.setPassword(parameters[1]);
@@ -52,6 +53,8 @@ public class RoomFactory extends ModelFactory implements IModel<RoomModel> {
             user.setLoyaltyLevel(Integer.valueOf(resultSet.getString("loyalty_level")));
         }
         return user;
+        */
+        return null;
     }
 }
 

@@ -1,9 +1,5 @@
 package DatabaseManager.Repository;
 
-import DatabaseManager.DBConfig;
-import DatabaseManager.Repository.MySQLRepository;
-import DatabaseManager.Repository.IRepository;
-
 
 public class RepositoryFactory {
 

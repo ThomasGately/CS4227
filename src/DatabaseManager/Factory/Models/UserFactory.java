@@ -1,6 +1,6 @@
 package DatabaseManager.Factory.Models;
 
-import DatabaseManager.DBConfig;
+import DatabaseManager.Repository.DBConfig;
 import DatabaseManager.Factory.IModel;
 import DatabaseManager.Factory.ModelFactory;
 import DatabaseManager.Repository.IRepository;
@@ -17,6 +17,7 @@ public class UserFactory extends ModelFactory implements IModel<UserModel> {
 
     @Override
     public void add(UserModel item) {
+        repository = RepositoryFactory.getRepository(DBConfig.getDatabaseConfig());
 
     }
 
@@ -32,7 +33,6 @@ public class UserFactory extends ModelFactory implements IModel<UserModel> {
 
     @Override
     public UserModel findByParameters(String... parameters) throws Exception {
-        resultSet = null;
         repository = RepositoryFactory.getRepository(DBConfig.getDatabaseConfig());
         query = "SELECT user_name, password, first_name, last_name, email_address, loyalty_level FROM User " +
                 "WHERE user_name = '" + parameters[0] + "' AND password = '" + parameters[1] + "';";

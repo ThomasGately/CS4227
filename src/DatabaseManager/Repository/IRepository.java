@@ -1,28 +1,27 @@
 package DatabaseManager.Repository;
 
-import DatabaseManager.DBConfig;
 import java.sql.*;
 
 public interface IRepository {
 
-    public abstract Connection getConnection() throws Exception;
+    Connection getConnection() throws Exception;
 
-    public abstract void closeConnection();
+    void closeConnection();
 
-    public abstract void closeStatement() throws SQLException;
+    void closeStatement() throws SQLException;
 
-    public abstract ResultSet queryDatabaseStatement(String query);
+    ResultSet queryDatabaseStatement(String query);
 
-    public abstract ResultSet queryDatabaseUpdate(String query);
+    ResultSet queryDatabaseUpdate(String query);
 
-    public abstract void executeStatement(String query);
+    void executeStatement(String query);
 
-    public abstract boolean executeUpdate(String query);
+    boolean executeUpdate(String query);
 
-    //public abstract String getDriver();
+    //String getDriver();
 
-    //public abstract String getURLStub();
+    //String getURLStub();
 
-    public abstract String getDatabaseURL();
+    String getDatabaseURL();
 
 }
