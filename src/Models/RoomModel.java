@@ -12,6 +12,23 @@ public class RoomModel implements IModel {
     private String Description;
     private RoomType roomType;
 
+    public RoomModel(int roomID, double price, String Description, RoomType roomType){
+
+        this.roomID = roomID;
+        this.price = price;
+        this.Description = Description;
+        this.roomType = roomType;
+
+    }
+
+    public RoomModel(double price, String Description, RoomType roomType){
+
+        this.price = price;
+        this.Description = Description;
+        this.roomType = roomType;
+
+    }
+
     public int getRoomID() {
         return roomID;
     }
