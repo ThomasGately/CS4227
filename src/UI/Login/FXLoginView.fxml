@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="600.0" stylesheets="@../dark_theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Login.LoginController">
+   <children>
+      <Label fx:id="textDisplayed" alignment="CENTER" layoutX="169.0" layoutY="85.0" prefHeight="80.0" prefWidth="262.0" textFill="#d32c2c">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Label>
+      <Label layoutX="221.0" layoutY="406.0" text="No Account?" textFill="#c6c6c6">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Hyperlink fx:id="linkToRegister" layoutX="298.0" layoutY="402.0" onAction="#RegisterButtonClicked" text="Create One" underline="true">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Hyperlink>
+      <FontAwesomeIconView fill="#868181" glyphName="LOCK" layoutX="281.0" layoutY="75.0" size="60" />
+      <JFXPasswordField fx:id="password" focusColor="#54c1d6" labelFloat="true" layoutX="169.0" layoutY="242.0" prefHeight="27.0" prefWidth="262.0" promptText="Password" unFocusColor="#868181">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </JFXPasswordField>
+      <JFXTextField fx:id="email" focusColor="#54c1d6" labelFloat="true" layoutX="169.0" layoutY="177.0" prefHeight="27.0" prefWidth="262.0" promptText="Email Address" styleClass="text-field" unFocusColor="#868181">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="240.0" layoutY="330.0" onAction="#loginButtonPushed" prefHeight="27.0" prefWidth="120.0" text="Login" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true" />
+      <FontAwesomeIconView fill="#868181" glyphName="ENVELOPE" layoutX="131.0" layoutY="201.0" size="26" />
+      <FontAwesomeIconView fill="#868181" glyphName="UNLOCK_ALT" layoutX="136.0" layoutY="266.0" size="26" />
+   </children>
+</AnchorPane>
