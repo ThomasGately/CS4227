@@ -2,15 +2,12 @@ package Models;
 
 public class RoomModel implements IModel {
 
-
-    public enum RoomType {
-        Good, bad
-    }
-
     private int roomID;
+    private int hotelID;
+    private String roomName;
     private double price;
     private String Description;
-    private RoomType roomType;
+    private int roomType;
 
     public int getRoomID() {
         return roomID;
@@ -18,6 +15,22 @@ public class RoomModel implements IModel {
 
     public void setRoomID(int roomID) {
         this.roomID = roomID;
+    }
+
+    public int getHotelID() {
+        return hotelID;
+    }
+
+    public void setHotelID(int hotelID) {
+        this.hotelID = hotelID;
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
     public double getPrice() {
@@ -36,11 +49,21 @@ public class RoomModel implements IModel {
         Description = description;
     }
 
-    public RoomType getRoomType() {
+    public int getRoomType() {
         return roomType;
     }
 
-    public void setRoomType(RoomType roomType) {
+    public void setRoomType(int roomType) {
         this.roomType = roomType;
+    }
+
+    @Override
+    public String toString() {
+        return "'" +
+                hotelID + "', '" +
+                roomName + "', '" +
+                price + "', '" +
+                Description + "', '" +
+                roomType + "'";
     }
 }
