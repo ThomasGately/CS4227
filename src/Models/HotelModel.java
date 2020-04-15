@@ -2,6 +2,13 @@ package Models;
 
 public class HotelModel implements IModel {
 
+    private int hotelID;
+    private String name;
+    private String address;
+    private String postCode;
+    private int phone;
+    private int managerID;
+
     public int getHotelID() {
         return hotelID;
     }
@@ -50,10 +57,4 @@ public class HotelModel implements IModel {
         this.managerID = managerID;
     }
 
-    private int hotelID;
-    private String name;
-    private String address;
-    private String postCode;
-    private int phone;
-    private int managerID;
 }

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f01cb66-03dd-4b33-b95f-9c1267b7e136" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/HotelDBFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/HotelModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/HotelDBFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/HotelDBFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/RoomDBFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/RoomDBFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Models/HotelModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/HotelModel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +198,7 @@
       <workItem from="1586801010049" duration="13118000" />
       <workItem from="1586893623927" duration="8560000" />
       <workItem from="1586923860197" duration="3150000" />
-      <workItem from="1586931501290" duration="6333000" />
+      <workItem from="1586931501290" duration="6678000" />
     </task>
     <task id="LOCAL-00001" summary="updating DB">
       <created>1585674938084</created>
@@ -215,7 +214,14 @@
       <option name="project" value="LOCAL" />
       <updated>1586937003768</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="updating DB">
+      <created>1586938008389</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1586938008389</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,10 +253,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586809998035" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1586937002774">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1586938007890">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586937002774" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586938007890" />
     <state x="735" y="303" key="DetectedRootsChooserDialog" timestamp="1585315733557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -299,10 +305,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586490394808" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586937228740">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586938018972">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586937228740" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586938018972" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586931505220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
