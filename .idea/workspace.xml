@@ -2,35 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f01cb66-03dd-4b33-b95f-9c1267b7e136" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/Guts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/DatabaseManager/Factory/Models/CustomerFactoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/IModelDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/ModelDBFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/CardDBFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/CustomerDBFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/ReservationDBFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Models/ModelFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/HotelDBFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Models/HotelModel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS4227.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS4227.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/DatabaseManager/DBConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/DatabaseManager/Repository/MySQLRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS4227/DatabaseManager/Repository/MySQLRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/DatabaseManager/Repository/Repository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS4227/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/IModel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/ModelFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/CardFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/ReservationFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/RoomFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/RoomDBFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/UserFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Repository/MySQLRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Repository/MySQLRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/CardModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/CardModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/ReservationModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/ReservationModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/RoomModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/RoomModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/UserModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/CustomerModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/RoomDBFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DatabaseManager/Factory/Models/RoomDBFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +45,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="DBCS4227: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="booking: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="DBCS4227@kek.ooguy.com" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="DBCS4227: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="hotel: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
@@ -217,7 +199,7 @@
       <workItem from="1586801010049" duration="13118000" />
       <workItem from="1586893623927" duration="8560000" />
       <workItem from="1586923860197" duration="3150000" />
-      <workItem from="1586931501290" duration="5311000" />
+      <workItem from="1586931501290" duration="6333000" />
     </task>
     <task id="LOCAL-00001" summary="updating DB">
       <created>1585674938084</created>
@@ -226,7 +208,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585674938084</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="updating DB">
+      <created>1586937003768</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1586937003768</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,10 +231,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="711" y="58" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586498533058" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1586931426096">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1586937979383">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586931426096" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586937979383" />
     <state x="811" y="298" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1585315775433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -258,10 +247,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="771" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586809998035" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1585674937568">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1586937002774">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585674937568" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1586937002774" />
     <state x="735" y="303" key="DetectedRootsChooserDialog" timestamp="1585315733557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -310,6 +299,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1586490394808" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1586937228740">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1586937228740" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1586931505220">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -3,12 +3,9 @@ package DatabaseManager.Factory.Models;
 import DatabaseManager.Repository.DBConfig;
 import DatabaseManager.Factory.IModelDB;
 import DatabaseManager.Factory.ModelDBFactory;
-import DatabaseManager.Repository.IRepository;
 import DatabaseManager.Repository.RepositoryFactory;
-import Models.CustomerModel;
 import Models.RoomModel;
 
-import java.sql.ResultSet;
 import java.util.ArrayList;
 
 public class RoomDBFactory extends ModelDBFactory<RoomModel> implements IModelDB<RoomModel> {
