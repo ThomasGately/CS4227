@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="450.0" prefWidth="450.0" stylesheets="@../dark_theme.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.paymentMenu.paymentMenuController">
+   <children>
+      <JFXTextField fx:id="card_holder_name" labelFloat="true" layoutX="62.0" layoutY="47.0" prefHeight="32.0" prefWidth="327.0" promptText="Cardholder name" />
+      <JFXTextField fx:id="credit_card_number" labelFloat="true" layoutX="62.0" layoutY="119.0" prefHeight="32.0" prefWidth="327.0" promptText="Credit Card Number" />
+      <JFXTextField fx:id="cvv_number" layoutX="62.0" layoutY="263.0" prefWidth="137.0" promptText="CVV" />
+      <JFXButton graphicTextGap="7.0" layoutX="151.0" layoutY="356.0" onAction="#payButtonPushed" prefHeight="44.0" prefWidth="148.0" text="Pay">
+         <graphic>
+            <FontAwesomeIconView glyphName="CREDIT_CARD" size="17" />
+         </graphic>
+      </JFXButton>
+      <JFXComboBox fx:id="expiry_month" labelFloat="true" layoutX="62.0" layoutY="197.0" prefHeight="27.0" prefWidth="137.0" promptText="Expiry month" styleClass="main-text" />
+      <JFXComboBox fx:id="expiry_year" layoutX="252.0" layoutY="197.0" prefHeight="27.0" prefWidth="137.0" promptText="Expiry year" styleClass="main-text" />
+   </children>
+</AnchorPane>

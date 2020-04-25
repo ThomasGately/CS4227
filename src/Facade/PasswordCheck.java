@@ -1,6 +1,6 @@
 package Facade;
 
-public class LoginPasswordCheck {
+public class PasswordCheck {
 
     private String password;
 

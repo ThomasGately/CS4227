@@ -3,7 +3,7 @@ package Facade;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class LoginEmailCheck {
+public class EmailCheck {
 
     private String email;
 
