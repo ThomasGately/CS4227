@@ -2,12 +2,31 @@ package Models;
 
 public class RoomModel implements IModel {
 
+    public enum RoomType {
+        GOOD,
+        BAD;
+
+        public static RoomType fromInteger(int x) {
+            switch(x) {
+                case 0:
+                    return GOOD;
+                case 1:
+                    return BAD;
+            }
+            return null;
+        }
+    }
+
     private int roomID;
     private int hotelID;
     private String roomName;
     private double price;
     private String Description;
-    private int roomType;
+    private RoomType roomType;
+
+    public RoomModel(){
+
+    }
 
     public RoomModel(int roomID, double price, String Description, RoomType roomType){
 
@@ -66,11 +85,11 @@ public class RoomModel implements IModel {
         Description = description;
     }
 
-    public int getRoomType() {
+    public RoomType getRoomType() {
         return roomType;
     }
 
-    public void setRoomType(int roomType) {
+    public void setRoomType(RoomType roomType) {
         this.roomType = roomType;
     }
 

@@ -10,14 +10,14 @@ public class RoomBuilderDirector {
 
         builder.thePrice(50.0);
         builder.theDescription("This is a normal room");
-        builder.theRoomType(RoomModel.RoomType.bad);
+        builder.theRoomType(RoomModel.RoomType.BAD);
     }
 
     public void addFancyRoom(RoomBuilder builder){
 
         builder.thePrice(250.0);
         builder.theDescription("This is a fancy room");
-        builder.theRoomType(RoomModel.RoomType.Good);
+        builder.theRoomType(RoomModel.RoomType.GOOD);
     }
 
 

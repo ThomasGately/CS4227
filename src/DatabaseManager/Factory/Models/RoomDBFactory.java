@@ -55,7 +55,7 @@ public class RoomDBFactory extends ModelDBFactory<RoomModel> implements IModelDB
         item.setHotelID(resultSet.getInt("hotel_id"));
         item.setRoomName(resultSet.getString("name"));
         item.setPrice(resultSet.getDouble("price"));
-        item.setRoomType(resultSet.getInt("room_type"));
+        item.setRoomType(RoomModel.RoomType.fromInteger(resultSet.getInt("room_type")));
         return item;
     }
 }
