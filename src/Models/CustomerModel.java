@@ -1,14 +1,17 @@
 package Models;
 
-public class UserModel implements IModel{
+public class CustomerModel implements IModel{
 
     private int userID;
     private String userName;
     private String password;
     private String firstName;
     private String lastName;
+    private String address;
     private String emailAddress;
+    private int phone;
     private int loyaltyLevel;
+    private int membership_type;
 
     public int getUserID() {
         return userID;
@@ -64,5 +67,43 @@ public class UserModel implements IModel{
 
     public void setLoyaltyLevel(int loyaltyLevel) {
         this.loyaltyLevel = loyaltyLevel;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public int getPhone() {
+        return phone;
+    }
+
+    public void setPhone(int phone) {
+        this.phone = phone;
+    }
+
+    public int getMembership_type() {
+        return membership_type;
+    }
+
+    public void setMembership_type(int membership_type) {
+        this.membership_type = membership_type;
+    }
+
+    @Override
+    public String toString() {
+        return "'" +
+                userID + "', '" +
+                userName + "', '" +
+                password + "', '" +
+                firstName + "', '" +
+                lastName + "', '" +
+                address + "', '" +
+                emailAddress + "', '" +
+                loyaltyLevel + "', '" +
+                membership_type + "'";
     }
 }

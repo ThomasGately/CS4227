@@ -17,16 +17,17 @@ public class MySQLRepository implements IRepository {
         this.databaseConnectionDetails = databaseConnectionDetails;
     }
 
-    public Connection getConnection() throws SQLException, ClassNotFoundException {
-        if (connection == null){
+    public Connection getConnection() throws SQLException {
+        System.out.println(getDatabaseURL());
+        if (connection == null) {
             connection = DriverManager.getConnection(getDatabaseURL(), databaseConnectionDetails.getUserName(), databaseConnectionDetails.getPassword());
         }
         return connection;
     }
 
-    public void closeConnection(){
+    public void closeConnection() {
         try{
-            if (connection != null){
+            if (connection != null) {
                 connection.close();
             }
             connection = null;
@@ -35,15 +36,14 @@ public class MySQLRepository implements IRepository {
         }
     }
 
-    public void closeStatement() throws SQLException{
+    public void closeStatement() throws SQLException {
         statement.close();
     }
 
-    public void executeStatement(String query){
+    public void executeStatement(String query) {
         try{
             statement = getConnection().createStatement();
             statement.execute(query);
-            //connection.commit();
         } catch (Exception ex){
             ex.printStackTrace();
         }
@@ -53,7 +53,6 @@ public class MySQLRepository implements IRepository {
         try{
             statement = getConnection().createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
             statement.execute(query);
-            //connection.commit();
         } catch (SQLException sqlEx){
             sqlEx.printStackTrace();
             return false;
@@ -65,32 +64,33 @@ public class MySQLRepository implements IRepository {
     }
 
     public String getDatabaseURL() {
-        return databaseConnectionDetails.getServerName() + ":" + databaseConnectionDetails.getPortNumber() +
-                ";databaseName=" + databaseConnectionDetails.getDatabaseName() + ";";
+        return "jdbc:mysql://" +
+                databaseConnectionDetails.getServerName() + ":" +
+                databaseConnectionDetails.getPortNumber() + "/" +
+                databaseConnectionDetails.getDatabaseName();
     }
 
     public ResultSet queryDatabaseStatement(String query){
-        ResultSet rs = null;
+        ResultSet resultSet = null;
         try{
             executeStatement(query);
-            rs = statement.getResultSet();
-            return rs;
+            return resultSet = statement.getResultSet();
         }
         catch (Exception ex){
             closeConnection();
         }
-        return rs;
+        return null;
     }
 
     public ResultSet queryDatabaseUpdate(String query){
-        ResultSet rs = null;
+        ResultSet resultSet = null;
         try{
             executeUpdate(query);
-            rs = statement.getResultSet();
+            resultSet = statement.getResultSet();
         } catch (Exception ex){
             ex.printStackTrace();
             closeConnection();
         }
-        return rs;
+        return null;
     }
 }

@@ -67,4 +67,14 @@ public class ReservationModel implements IModel {
     public void setDepartureDate(String departureDate) {
         this.departureDate = departureDate;
     }
+
+    @Override
+    public String toString() {
+        return "'" +
+                userID + "', '" +
+                price + "', '" +
+                payed + "', '" +
+                arrivalDate + "', '" +
+                departureDate + "'";
+    }
 }
