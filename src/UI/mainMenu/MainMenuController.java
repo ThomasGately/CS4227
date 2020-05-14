@@ -25,4 +25,14 @@ public class MainMenuController {
         primaryStage.setScene(loginPageScene);
         primaryStage.show();
     }
+    @FXML
+    public void BookingButtonPushed(ActionEvent actionEvent) throws IOException {
+
+        Parent BookingPageParent = FXMLLoader.load(getClass().getResource("../bookingMenu/FXBookingView.fxml"));
+        Scene bookingPageScene = new Scene(BookingPageParent);
+        Stage primaryStage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+        primaryStage.hide();
+        primaryStage.setScene(bookingPageScene);
+        primaryStage.show();
+    }
 }

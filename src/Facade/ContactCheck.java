@@ -3,7 +3,7 @@ package Facade;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class RegisterContactCheck {
+public class ContactCheck {
 
     private String mobileNumber;
 

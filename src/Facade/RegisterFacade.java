@@ -9,11 +9,11 @@ public class RegisterFacade {
     private String password;
     private String gender;
 
-    LoginEmailCheck emailChecker;
-    LoginPasswordCheck passwordChecker;
-    RegisterNameCheck fNameChecker;
-    RegisterNameCheck sNameChecker;
-    RegisterContactCheck contactChecker;
+    EmailCheck emailChecker;
+    PasswordCheck passwordChecker;
+    NameCheck fNameChecker;
+    NameCheck sNameChecker;
+    ContactCheck contactChecker;
 
     public RegisterFacade(String fName, String sName, String emailAddress, String pass, String conNumber){
         this.firstName = fName;
@@ -23,11 +23,11 @@ public class RegisterFacade {
         this.contactNumber = conNumber;
 
 
-        emailChecker = new LoginEmailCheck();
-        passwordChecker = new LoginPasswordCheck();
-        fNameChecker = new RegisterNameCheck();
-        sNameChecker = new RegisterNameCheck();
-        contactChecker = new RegisterContactCheck();
+        emailChecker = new EmailCheck();
+        passwordChecker = new PasswordCheck();
+        fNameChecker = new NameCheck();
+        sNameChecker = new NameCheck();
+        contactChecker = new ContactCheck();
         emailChecker.setEmail(email);
         passwordChecker.setPassword(password);
         fNameChecker.setName(firstName);

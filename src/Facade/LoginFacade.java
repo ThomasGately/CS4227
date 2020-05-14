@@ -6,15 +6,15 @@ public class LoginFacade {
     private String password;
     private String message;
 
-    LoginEmailCheck emailChecker;
-    LoginPasswordCheck passwordChecker;
+    EmailCheck emailChecker;
+    PasswordCheck passwordChecker;
 
     public LoginFacade(String newEmail, String newPassword){
         this.email = newEmail;
         this.password = newPassword;
 
-        emailChecker = new LoginEmailCheck();
-        passwordChecker = new LoginPasswordCheck();
+        emailChecker = new EmailCheck();
+        passwordChecker = new PasswordCheck();
         emailChecker.setEmail(email);
         passwordChecker.setPassword(password);
     }
