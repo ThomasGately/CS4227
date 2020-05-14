@@ -18,7 +18,7 @@ public class HotelAdaptee{
         return availableRooms;
     }
 
-    public void bookRoom(int roomNumber) {
+    /*public void bookRoom(int roomNumber) {
         Room bookedRoom = availableRooms.stream()
                 .filter(room -> room.getRoomNumber() == roomNumber)
                 .findFirst()
@@ -29,5 +29,5 @@ public class HotelAdaptee{
         }else{
             System.out.println("Requested room was not available.");
         }
-    }
+    }*/
 }

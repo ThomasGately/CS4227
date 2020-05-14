@@ -1,11 +1,14 @@
 
 * {
-    -fx-primary : #2A2E37;
-    -fx-secondary : #68eeff;
+    -fx-primary : #202c31;
+    -fx-secondary : rgba(78, 219, 207, 0.75);
     -fx-primarytext : #b5b5b5;
     -fx-blue: #1976D2;
     -fx-red: #FF0000;
     -fx-color-1:#1976D2;
+
+    /*-fx-primary : #2A2E37;*/
+
 }
 
 .root{
@@ -19,17 +22,18 @@
 
 .button{
     -fx-text-fill: -fx-primarytext;
-    -fx-background-color: -fx-primary;
+    -fx-background-color: rgba(121, 121, 121, 0.25);
     -fx-border-color: -fx-secondary;
     -fx-border-radius: 20px;
     -fx-background-radius: 20px;
     -fx-font-size: 13pt;
 }
 
-.button:hover, .button:focused{
+.button:hover{
     -fx-border-color: -fx-secondary;
     -fx-background-color: -fx-secondary;
     -fx-text-fill: -fx-primary;
+
 }
 
 .text-field
@@ -37,7 +41,8 @@
     -fx-text-fill: -fx-primarytext;
     -fx-font-size : 12pt;
     -jfx-focus-color: -fx-secondary;
-    -fx-text-fill: derive(-fx-secondary, 10%);
+
+    -fx-prompt-text-fill: #747474;
 }
 
 /*Login Screen Specific*/
@@ -101,20 +106,12 @@
     -fx-min-width: 150px;
 }
 
-/*Hamburger Styling*/
-.jfx-hamburger-icon{
-    -fx-spacing: 7;
-}
 
-.jfx-hamburger-icon StackPane
-{
-    -fx-background-color: -fx-secondary;
-    -fx-background-radius: 5px;
-}
 /*Registration RadioButton*/
 .radio-button
 {
-    -fx-fill: #68eeff;
+    -fx-fill: -fx-secondary;
+
 }
 /*Toolbar buttons*/
 .toolbar-button
@@ -138,8 +135,9 @@
 /*Text styling*/
 .main-text
 {
-    -fx-fill: -fx-primarytext;
-    -fx-font-size: 10pt;
+    -fx-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 12pt;
     -fx-text-alignment: center;
 }
 
@@ -164,6 +162,16 @@
 .jfx-layout-actions
 {
     -fx-hgap:8;
+}
+/*comboBox*/
+.jfx-combo-box {
+    /*-jfx-focus-color: -fx-secondary;*/
+    /*-jfx-unfocus-color: #4d4d4d;*/
+    -fx-prompt-text-fill: #747474;
+}
+.jfx-combo-box .label {
+    -fx-text-fill: #767676;
+
 }
 
 /*Chart Styling*/
@@ -308,21 +316,6 @@
     -fx-font-size: 10pt;
 }
 
-/*Progrss bar*/
-
-.progress-bar-main .track{
-    -fx-background-color: -fx-primary;
-}
-.progress-bar-main .bar{
-    -fx-background-color: -fx-secondary;
-    -fx-padding: 5px;
-}
-
-.common-label{
-    -fx-background-color: transparent;
-    -fx-text-fill: -fx-secondary;
-    -fx-font-size: 12pt;
-}
 
 /*Alert Dialog*/
 
@@ -348,5 +341,5 @@
 }
 
 .colored-context-menu .menu-item:focused .label {
-    -fx-text-fill: black;
+    -fx-text-fill: #db1616;
 }

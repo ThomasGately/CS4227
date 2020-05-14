@@ -14,11 +14,11 @@ public class HotelAdapter implements HotelTarget {
     public void printAvailableRooms() {
         List allAvailableRooms = hotelAdaptee.getAllAvailableRooms();
         System.out.println("Rooms Available:");
-        allAvailableRooms.forEach(room -> System.out.println(room.getRoomNumber()));
+        //allAvailableRooms.forEach(room -> System.out.println(room.getRoomNumber()));
     }
 
     @Override
     public void bookByRoomNumber(int roomNumber) {
-        hotelAdaptee.bookRoom(roomNumber);
+        //hotelAdaptee.bookRoom(roomNumber);
     }
 }
