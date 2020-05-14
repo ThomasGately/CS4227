@@ -19,12 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2f01cb66-03dd-4b33-b95f-9c1267b7e136" name="Default Changelist" comment="Booking menu Finished, payment menu almost finished.">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_9.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS4227.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS4227.iml" afterDir="false" />
-    </list>
+    <list default="true" id="2f01cb66-03dd-4b33-b95f-9c1267b7e136" name="Default Changelist" comment="Booking menu Finished, payment menu almost finished." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,12 +35,26 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="putting_thinks_together" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
         <entry key="$PROJECT_DIR$" value="master" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1YuO5pqnL37IxO1KZ70M8LVsEwa" />
   <component name="ProjectViewState">
@@ -128,7 +137,7 @@
       <workItem from="1587664385566" duration="45000" />
       <workItem from="1587664448145" duration="8492000" />
       <workItem from="1587773700338" duration="18990000" />
-      <workItem from="1589490246389" duration="948000" />
+      <workItem from="1589490246389" duration="1368000" />
     </task>
     <task id="LOCAL-00001" summary="UI added and Facade Design pattern.">
       <created>1586719639560</created>
@@ -282,9 +291,14 @@
     </state>
     <state width="914" height="347" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585344303728" />
     <state width="939" height="339" key="GridCell.Tab.1.right/0.23.1920.1010@0.23.1920.1010" timestamp="1587833700204" />
-    <state x="676" y="251" key="MultipleFileMergeDialog" timestamp="1586980128303">
-      <screen x="0" y="23" width="1920" height="1011" />
+    <state x="188" y="85" key="MergeDialog" timestamp="1589492067665">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="188" y="85" key="MergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589492067665" />
+    <state x="676" y="235" key="MultipleFileMergeDialog" timestamp="1589492067665">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="676" y="235" key="MultipleFileMergeDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589492067665" />
     <state x="676" y="251" key="MultipleFileMergeDialog/0.23.1920.1011@0.23.1920.1011" timestamp="1586980128303" />
     <state x="461" y="162" key="SettingsEditor" timestamp="1589491669825">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -297,10 +311,18 @@
     </state>
     <state x="560" y="266" key="Vcs.Push.Dialog.v2/0.23.1920.1007@0.23.1920.1007" timestamp="1586720328534" />
     <state x="560" y="267" key="Vcs.Push.Dialog.v2/0.23.1920.1010@0.23.1920.1010" timestamp="1587849636703" />
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1589492093496">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="92" y="92" width="1736" height="856" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589492093496" />
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585664670818">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585664670818" />
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589492093485">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="769" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589492093485" />
     <state x="607" y="248" key="git4idea.branch.GitSmartOperationDialog" timestamp="1586980126128">
       <screen x="0" y="23" width="1920" height="1011" />
     </state>
@@ -320,6 +342,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1589491533321" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589491971125">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1589491971125" />
     <state x="1270" y="314" key="svn.repositoryBrowser" timestamp="1584979445819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
