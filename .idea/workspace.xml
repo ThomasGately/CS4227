@@ -2,13 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2f01cb66-03dd-4b33-b95f-9c1267b7e136" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/RoomBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/RoomBuilderDirector.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/roomInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/test.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/ReservationBuilder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/ReservationBuilderDirector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/reservationInterface.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CS4227.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS4227.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Models/RoomModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Models/RoomModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS4227/DatabaseManager/DBConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS4227/DatabaseManager/Repository/MySQLRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS4227/DatabaseManager/Repository/MySQLRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS4227/DatabaseManager/Repository/Repository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/CS4227/META-INF/CS4227.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DesignPatterns/Builder/RoomBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/RoomBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DesignPatterns/Builder/RoomBuilderDirector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/RoomBuilderDirector.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DesignPatterns/Builder/roomInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DesignPatterns/Builder/roomInterface.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +34,7 @@
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="ProjectId" id="1YuO5pqnL37IxO1KZ70M8LVsEwa" />
   <component name="ProjectViewState">
@@ -44,7 +49,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CS4227v2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -87,8 +92,28 @@
       <workItem from="1585664654819" duration="4285000" />
       <workItem from="1585781156903" duration="3254000" />
       <workItem from="1585853459316" duration="4406000" />
-      <workItem from="1585931011706" duration="3313000" />
+      <workItem from="1585931011706" duration="4818000" />
+      <workItem from="1586009786687" duration="21000" />
+      <workItem from="1586038277505" duration="664000" />
+      <workItem from="1586087860469" duration="606000" />
+      <workItem from="1586300176403" duration="1408000" />
+      <workItem from="1586446407356" duration="3596000" />
+      <workItem from="1586517420802" duration="1468000" />
+      <workItem from="1586637677944" duration="1202000" />
+      <workItem from="1586801294750" duration="252000" />
+      <workItem from="1586801851355" duration="13000" />
+      <workItem from="1589194084584" duration="765000" />
+      <workItem from="1589386778484" duration="1195000" />
+      <workItem from="1589474149382" duration="5426000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial Branch:&#10;Basic Design Pattern Builder setup.&#10;Added Constructors to RoomModel.java.">
+      <created>1585940120374</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585940120374</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -97,17 +122,18 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding base project" />
     <MESSAGE value="updating DB" />
-    <option name="LAST_COMMIT_MESSAGE" value="updating DB" />
+    <MESSAGE value="Initial Branch:&#10;Basic Design Pattern Builder setup.&#10;Added Constructors to RoomModel.java." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial Branch:&#10;Basic Design Pattern Builder setup.&#10;Added Constructors to RoomModel.java." />
   </component>
   <component name="WindowStateProjectService">
     <state x="1171" y="331" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1585783003099">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="1171" y="331" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585783003099" />
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1585783102208">
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser" timestamp="1586447222116">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1585783102208" />
+    <state x="765" y="229" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1586447222116" />
     <state x="811" y="298" key="#com.intellij.openapi.roots.ui.configuration.libraryEditor.LibraryEditorDialog" timestamp="1585315775433">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -120,18 +146,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585781444195" />
-    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1585674854865">
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1585940119621">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585674854865" />
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585940119621" />
     <state x="735" y="303" key="DetectedRootsChooserDialog" timestamp="1585315733557">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="735" y="303" key="DetectedRootsChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585315733557" />
-    <state x="1220" y="265" key="FileChooserDialogImpl" timestamp="1585328713496">
+    <state x="1220" y="265" key="FileChooserDialogImpl" timestamp="1589474381126">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1220" y="265" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585328713496" />
+    <state x="1220" y="265" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589474381126" />
     <state x="1249" y="293" key="Github.ShareDialog" timestamp="1583789257362">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -172,14 +198,26 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585315813095" />
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1585931014864">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1589490606090">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585931014864" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589490606090" />
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog" timestamp="1589474150946">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="656" y="344" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589474150946" />
     <state x="664" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1585933177309">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="664" y="413" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1040@0.0.1920.1040" timestamp="1585933177309" />
+    <state x="1249" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1589194182948">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1249" y="437" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040@0.0.1920.1040" timestamp="1589194182948" />
+    <state x="1229" y="236" key="git4idea.branch.GitSmartOperationDialog" timestamp="1589475268322">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1229" y="236" key="git4idea.branch.GitSmartOperationDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1589475268322" />
     <state x="1270" y="314" key="svn.repositoryBrowser" timestamp="1584979445819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
