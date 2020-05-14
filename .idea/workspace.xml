@@ -20,17 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2f01cb66-03dd-4b33-b95f-9c1267b7e136" name="Default Changelist" comment="Booking menu Finished, payment menu almost finished.">
-      <change afterPath="$PROJECT_DIR$/src/Facade/CreditCardFacade.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_9.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/fontawesomefx_8_9.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/jfoenix_8_0_8.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/Facade/LoginEmailCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/Facade/LoginFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS4227/Facade/LoginFacade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/Facade/LoginPasswordCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/Facade/RegisterContactCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/Facade/RegisterFacade.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS4227/Facade/RegisterFacade.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/Facade/RegisterNameCheck.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/CS4227/UI/paymentMenu/paymentMenuController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/CS4227/UI/paymentMenu/paymentMenuController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/paymentMenu/FXpaymentMenuView.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/paymentMenu/paymentMenuController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/paymentMenu/paymentMenuController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CS4227.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CS4227.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +58,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/mysql-connector-java-8.0.19.jar!/" />
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -135,6 +128,7 @@
       <workItem from="1587664385566" duration="45000" />
       <workItem from="1587664448145" duration="8492000" />
       <workItem from="1587773700338" duration="18990000" />
+      <workItem from="1589490246389" duration="948000" />
     </task>
     <task id="LOCAL-00001" summary="UI added and Facade Design pattern.">
       <created>1586719639560</created>
@@ -161,19 +155,20 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Adding base project" />
@@ -226,10 +221,10 @@
     <state x="100" y="123" width="1720" height="807" key="DiffContextDialog/0.23.1920.1007@0.23.1920.1007" timestamp="1586717493277" />
     <state x="100" y="123" width="1720" height="811" key="DiffContextDialog/0.23.1920.1010@0.23.1920.1010" timestamp="1587863158991" />
     <state x="100" y="123" width="1720" height="811" key="DiffContextDialog/0.23.1920.1011@0.23.1920.1011" timestamp="1586980132504" />
-    <state x="1220" y="238" key="FileChooserDialogImpl" timestamp="1586800452136">
-      <screen x="0" y="0" width="1920" height="933" />
+    <state x="1220" y="265" key="FileChooserDialogImpl" timestamp="1589491658101">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1220" y="265" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585328713496" />
+    <state x="1220" y="265" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1589491658101" />
     <state x="1220" y="238" key="FileChooserDialogImpl/0.0.1920.933@0.0.1920.933" timestamp="1586800452136" />
     <state x="1249" y="293" key="Github.ShareDialog" timestamp="1583789257362">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -291,10 +286,10 @@
       <screen x="0" y="23" width="1920" height="1011" />
     </state>
     <state x="676" y="251" key="MultipleFileMergeDialog/0.23.1920.1011@0.23.1920.1011" timestamp="1586980128303" />
-    <state x="461" y="82" key="SettingsEditor" timestamp="1586800457292">
-      <screen x="0" y="0" width="1920" height="933" />
+    <state x="461" y="162" key="SettingsEditor" timestamp="1589491669825">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585315813095" />
+    <state x="461" y="162" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1589491669825" />
     <state x="461" y="82" key="SettingsEditor/0.0.1920.933@0.0.1920.933" timestamp="1586800457292" />
     <state x="461" y="180" key="SettingsEditor/0.23.1920.1007@0.23.1920.1007" timestamp="1586717553991" />
     <state x="560" y="267" key="Vcs.Push.Dialog.v2" timestamp="1587849636703">
@@ -321,6 +316,10 @@
       <screen x="0" y="23" width="1920" height="1007" />
     </state>
     <state x="547" y="379" key="git4idea.ui.GitTagDialog/0.23.1920.1007@0.23.1920.1007" timestamp="1586719949816" />
+    <state x="342" y="140" key="new project wizard" timestamp="1589491533321">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1589491533321" />
     <state x="1270" y="314" key="svn.repositoryBrowser" timestamp="1584979445819">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
