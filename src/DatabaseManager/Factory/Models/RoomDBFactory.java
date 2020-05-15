@@ -6,6 +6,7 @@ import DatabaseManager.Factory.ModelDBFactory;
 import DatabaseManager.Repository.RepositoryFactory;
 import Models.RoomModel;
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 public class RoomDBFactory extends ModelDBFactory<RoomModel> implements IModelDB<RoomModel> {
@@ -21,11 +22,38 @@ public class RoomDBFactory extends ModelDBFactory<RoomModel> implements IModelDB
     }
 
     @Override
-    public RoomModel findByParameters(String... parameters) throws Exception {
-        return null;
+    public boolean existInDB(String... parameters) {
+        return false;
     }
 
-    public ArrayList<RoomModel> findManyByParameters(String... parameters) throws Exception {
+    @Override
+    public RoomModel findByParameters(String... parameters) {
+
+        query = "SELECT room_id " +
+                "FROM booking b " +
+                "JOIN room_booking rb on (b.booking_id = rb.booking) " +
+                "JOIN room r on (rb.room = r.room_id) " +
+                "WHERE check_in_date > '" + parameters[0] +
+                "' OR check_out_date < '" + parameters[1] + "';";
+
+        resultSet = repository.queryDatabaseStatement(query);
+        RoomModel room = new RoomModel();
+        try {
+            if (resultSet.next()) {
+                room.setRoomID(resultSet.getInt("room_id"));
+                return resultSetToModel(room);
+            }
+            else {
+                return null;
+            }
+        }
+        catch (SQLException ex) {
+            ex.printStackTrace();
+            return null;
+        }
+    }
+
+    public ArrayList<RoomModel> findManyByParameters(String... parameters) {
 
         query = dQuery +
                 "INNER JOIN room_booking " +
@@ -34,22 +62,25 @@ public class RoomDBFactory extends ModelDBFactory<RoomModel> implements IModelDB
                 "ON (room_booking.room = room.room_id)" +
                 "WHERE check_in_date > '" + parameters[0] + "' " +
                 "OR check_out_date < '" + parameters[1] + "';";
-        try{
-            resultSet = repository.queryDatabaseStatement(query);
-        } catch (Exception ex){
+
+        resultSet = repository.queryDatabaseStatement(query);
+        ArrayList<RoomModel> rooms = new ArrayList<RoomModel>();
+
+        try {
+            while (resultSet.next()) {
+                RoomModel room = new RoomModel();
+                rooms.add(resultSetToModel(room));
+            }
+            return rooms;
+        }
+        catch (SQLException ex) {
             ex.printStackTrace();
             return null;
         }
-        ArrayList<RoomModel> rooms = new ArrayList<RoomModel>();
-        while (resultSet.next()) {
-            RoomModel room = new RoomModel();
-            rooms.add(resultSetToModel(room));
-        }
-        return rooms;
     }
 
     @Override
-    protected RoomModel resultSetToModel(RoomModel item) throws Exception {
+    protected RoomModel resultSetToModel(RoomModel item) throws SQLException {
 
         item.setRoomID(resultSet.getInt("room_id"));
         item.setHotelID(resultSet.getInt("hotel_id"));

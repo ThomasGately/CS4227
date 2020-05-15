@@ -6,13 +6,16 @@ import DatabaseManager.Factory.ModelDBFactory;
 import DatabaseManager.Repository.RepositoryFactory;
 import Models.CustomerModel;
 
+import java.sql.SQLException;
+
 public class CustomerDBFactory extends ModelDBFactory<CustomerModel> implements IModelDB<CustomerModel> {
 
-    public CustomerDBFactory() throws Exception {
+    public CustomerDBFactory() {
+
         repository = RepositoryFactory.getRepository(DBConfig.getDatabaseConfig());
         tableName = "customer";
-        modelInfo = "user_name, first_name, last_name, address, phone, " +
-                        "email_address, password, loyalty_level, membership_type";
+        modelInfo = "user_name, password, first_name, last_name, address, " +
+                        "email_address, phone, loyalty_level, membership_type";
         dQuery = "SELECT " + modelInfo + " " +
                  "FROM "   + tableName + " " +
                  "INNER JOIN customer_membership " +
@@ -20,34 +23,65 @@ public class CustomerDBFactory extends ModelDBFactory<CustomerModel> implements 
     }
 
     @Override
-    public CustomerModel findByParameters(String... parameters) throws Exception {
+    public CustomerModel findByParameters(String... parameters) {
+
         query = "SELECT " + modelInfo + " " +
                 "FROM customer " +
-                "WHERE user_name = '" + parameters[0] +
+                "WHERE email_address = '" + parameters[0] +
                 "' AND password = '" + parameters[1] + "';";
-        try{
-            resultSet = repository.queryDatabaseStatement(query);
-        } catch (Exception ex){
+
+        resultSet = repository.queryDatabaseStatement(query);
+        CustomerModel customer = new CustomerModel();
+        try {
+            if (resultSet.next()) {
+                return resultSetToModel(customer);
+            }
+            else {
+                return null;
+            }
+        }
+        catch (SQLException ex) {
             ex.printStackTrace();
             return null;
         }
-        CustomerModel customer = new CustomerModel();
-        return resultSetToModel(customer);
     }
 
     @Override
-    protected CustomerModel resultSetToModel(CustomerModel item) throws Exception {
-        while (resultSet.next()){
-            item.setUserName(resultSet.getString("user_name"));
-            item.setFirstName(resultSet.getString("first_name"));
-            item.setLastName(resultSet.getString("last_name"));
-            item.setAddress(resultSet.getString("address"));
-            item.setPhone(resultSet.getInt("phone"));
-            item.setEmailAddress(resultSet.getString("email_address"));
-            item.setPassword(resultSet.getString("password"));
-            item.setLoyaltyLevel(resultSet.getInt("loyalty_level"));
-            item.setMembership_type(resultSet.getInt("membership_name"));
+    public boolean existInDB(String... parameters) {
+
+        query = "SELECT email_address, password " +
+                "FROM customer " +
+                "WHERE email_address = '" + parameters[0] +
+                "' AND password = '" + parameters[1] + "';";
+
+        resultSet = repository.queryDatabaseStatement(query);
+
+        try {
+            if (resultSet.next()) {
+                return true;
+            }
+            else {
+                return false;
+            }
         }
+        catch (SQLException ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    protected CustomerModel resultSetToModel(CustomerModel item) throws SQLException {
+
+        item.setUserName(resultSet.getString("user_name"));
+        item.setFirstName(resultSet.getString("first_name"));
+        item.setLastName(resultSet.getString("last_name"));
+        item.setAddress(resultSet.getString("address"));
+        item.setPhone(resultSet.getInt("phone"));
+        item.setEmailAddress(resultSet.getString("email_address"));
+        item.setPassword(resultSet.getString("password"));
+        item.setLoyaltyLevel(resultSet.getInt("loyalty_level"));
+        item.setMembership_type(resultSet.getInt("membership_name"));
         return item;
     }
 }

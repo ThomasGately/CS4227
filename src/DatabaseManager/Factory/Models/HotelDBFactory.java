@@ -17,7 +17,12 @@ public class HotelDBFactory extends ModelDBFactory<HotelModel> implements IModel
     }
 
     @Override
-    public HotelModel findByParameters(String... parameters) throws Exception {
+    public boolean existInDB(String... parameters) {
+        return false;
+    }
+
+    @Override
+    public HotelModel findByParameters(String... parameters) {
         return null;
     }
 

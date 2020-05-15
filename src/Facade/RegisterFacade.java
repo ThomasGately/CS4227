@@ -1,5 +1,7 @@
 package Facade;
 
+import Models.CustomerModel;
+
 public class RegisterFacade {
 
     private String firstName;
@@ -15,7 +17,7 @@ public class RegisterFacade {
     NameCheck sNameChecker;
     ContactCheck contactChecker;
 
-    public RegisterFacade(String fName, String sName, String emailAddress, String pass, String conNumber){
+    public RegisterFacade(String fName, String sName, String emailAddress, String pass, String conNumber) {
         this.firstName = fName;
         this.sureName = sName;
         this.email = emailAddress;
@@ -41,15 +43,34 @@ public class RegisterFacade {
     public String getContactNumber(){return contactNumber;}
 
 
-    public boolean register(){
+    public boolean register() {
         boolean valid = false;
 
-        if(emailChecker.emailCheck(getEmail()) && passwordChecker.passwordCheck(getPassword()) && fNameChecker.nameCheck(getFirstName()) && sNameChecker.nameCheck(getSureName()) && contactChecker.contactCheck(getContactNumber())){
+        if (emailChecker.emailCheck(getEmail()) &&
+                passwordChecker.passwordCheck(getPassword()) &&
+                fNameChecker.nameCheck(getFirstName()) &&
+                sNameChecker.nameCheck(getSureName()) &&
+                contactChecker.contactCheck(getContactNumber())) {
 
             valid = true;
         }
         //We need to check with the database as well
 
         return valid;
+    }
+
+    public CustomerModel toModel(CustomerModel item) {
+
+        item.setFirstName(getFirstName());
+        item.setLastName(getSureName());
+        item.setEmailAddress(getEmail());
+        item.setPassword(getPassword());
+        item.setPhone(Integer.parseInt(getContactNumber()));
+
+        item.setUserName("null");
+        item.setAddress("null");
+        item.setLoyaltyLevel(0);
+        item.setMembership_type(1);
+        return item;
     }
 }

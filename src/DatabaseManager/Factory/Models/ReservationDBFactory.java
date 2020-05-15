@@ -6,9 +6,11 @@ import DatabaseManager.Repository.DBConfig;
 import DatabaseManager.Repository.RepositoryFactory;
 import Models.ReservationModel;
 
+import java.sql.SQLException;
+
 public class ReservationDBFactory extends ModelDBFactory<ReservationModel> implements IModelDB<ReservationModel> {
 
-    public ReservationDBFactory() throws Exception {
+    public ReservationDBFactory() {
 
         repository = RepositoryFactory.getRepository(DBConfig.getDatabaseConfig());
         tableName = "booking";
@@ -19,7 +21,7 @@ public class ReservationDBFactory extends ModelDBFactory<ReservationModel> imple
     }
 
     @Override
-    public boolean add(ReservationModel item) throws Exception {
+    public boolean add(ReservationModel item) {
 
         query = "INSERT INTO " + tableName +
                 " (" + modelInfo + ") " +
@@ -64,12 +66,33 @@ public class ReservationDBFactory extends ModelDBFactory<ReservationModel> imple
     }
 
     @Override
-    public ReservationModel findByParameters(String... parameters) throws Exception {
+    public boolean existInDB(String... parameters) {
+
+        query = "SELECT * " +
+                "FROM booking b " +
+                "JOIN room_booking rb on (b.booking_id = rb.booking) " +
+                "JOIN room r on (rb.room = r.room_id) " +
+                "WHERE check_in_date > '" + parameters[0] +
+                "' OR check_out_date < '" + parameters[1] + "';";
+
+        resultSet = repository.queryDatabaseStatement(query);
+
+        try {
+            return resultSet.next();
+        }
+        catch (SQLException ex) {
+            ex.printStackTrace();
+            return false;
+        }
+    }
+
+    @Override
+    public ReservationModel findByParameters(String... parameters) {
         return null;
     }
 
     @Override
-    protected ReservationModel resultSetToModel(ReservationModel item) throws Exception {
+    protected ReservationModel resultSetToModel(ReservationModel item) {
         return null;
     }
 }

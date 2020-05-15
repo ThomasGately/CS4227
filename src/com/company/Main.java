@@ -1,5 +1,6 @@
 package com.company;
 
+import DatabaseManager.Repository.DBConfig;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -22,6 +23,8 @@ public class Main extends Application {
     }
 
     public static void main(String args[]){
+
+        /*
         try{
             Class.forName("com.mysql.jdbc.Driver");
             Connection con= DriverManager.getConnection(
@@ -33,6 +36,15 @@ public class Main extends Application {
                 System.out.println(rs.getInt(1)+"  "+rs.getString(2)+"  "+rs.getString(3));
             con.close();
         }catch(Exception e){ System.out.println(e);}
+        */
+        DBConfig dbConfig = new DBConfig();
+
+        dbConfig.setDatabaseName("DBCS4227");
+        dbConfig.setServerName("kek.ooguy.com");
+        dbConfig.setPortNumber("6603");
+        dbConfig.setUserName("root");
+        dbConfig.setPassword("mypassword");
+        dbConfig.setDatabaseConfigInstance(dbConfig);
 
         launch(args);
     }

@@ -70,24 +70,25 @@ public class MySQLRepository implements IRepository {
                 databaseConnectionDetails.getDatabaseName();
     }
 
-    public ResultSet queryDatabaseStatement(String query){
+    public ResultSet queryDatabaseStatement(String query) {
         ResultSet resultSet = null;
-        try{
+        try {
+            System.out.println(query);
             executeStatement(query);
             return resultSet = statement.getResultSet();
         }
-        catch (Exception ex){
+        catch (Exception ex) {
             closeConnection();
         }
         return null;
     }
 
-    public ResultSet queryDatabaseUpdate(String query){
+    public ResultSet queryDatabaseUpdate(String query) {
         ResultSet resultSet = null;
-        try{
+        try {
             executeUpdate(query);
             resultSet = statement.getResultSet();
-        } catch (Exception ex){
+        } catch (Exception ex) {
             ex.printStackTrace();
             closeConnection();
         }

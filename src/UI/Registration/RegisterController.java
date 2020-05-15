@@ -1,6 +1,8 @@
 package UI.Registration;
 
+import DatabaseManager.Factory.ModelDBFactory;
 import Facade.RegisterFacade;
+import Models.CustomerModel;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXRadioButton;
@@ -16,6 +18,8 @@ import javafx.scene.paint.Paint;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+
+import static DatabaseManager.Factory.ModelDBFactory.FactoryType.Customer;
 
 public class RegisterController {
 
@@ -45,6 +49,9 @@ public class RegisterController {
         boolean validRegister = false;
         labelMessage.setTextFill(Paint.valueOf("#d32c2c"));
 
+        ModelDBFactory dbCustomer = ModelDBFactory.getModelDBFactory(Customer);
+        CustomerModel customer = new CustomerModel();
+
         if (firstName.getText().isEmpty() || suranme.getText().isEmpty() || emailAddress.getText().isEmpty() || password.getText().isEmpty() || mobileNumber.getText().isEmpty()) {
             messageDisplayed = "All fields are required!";
         }
@@ -52,14 +59,24 @@ public class RegisterController {
 
             RegisterFacade reg = new RegisterFacade(firstName.getText(), suranme.getText(), emailAddress.getText(), password.getText(), mobileNumber.getText());
 
-             validRegister = reg.register();
+            validRegister = reg.register();
 
-            if(validRegister){
-                messageDisplayed = "Registered Successfully!";
-                labelMessage.setTextFill(Paint.valueOf("#40F272"));
+            if(validRegister) {
+                if (!dbCustomer.existInDB(emailAddress.getText(), password.getText())) {
+                    customer = reg.toModel(customer);
+                    if (dbCustomer.add(customer)) {
+                        messageDisplayed = "Registered Successfully!";
+                        labelMessage.setTextFill(Paint.valueOf("#40F272"));
+                    }
+                    else {
+                        messageDisplayed = "DB Error!";
+                    }
+                }
+                else {
+                    messageDisplayed = "Email already in DB!";
+                }
             }
-            else
-            {
+            else {
                 messageDisplayed = "One of the fields is not Valid!";
             }
         }

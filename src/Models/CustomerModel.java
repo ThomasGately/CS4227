@@ -13,7 +13,11 @@ public class CustomerModel implements IModel{
     private int loyaltyLevel;
     private int membership_type;
 
-    public int getUserID() {
+    public CustomerModel() {
+
+    }
+
+    public int getUserID(String password, String firstName, String lastName, String emailAddress, int phone) {
         return userID;
     }
 
@@ -96,13 +100,13 @@ public class CustomerModel implements IModel{
     @Override
     public String toString() {
         return "'" +
-                userID + "', '" +
                 userName + "', '" +
                 password + "', '" +
                 firstName + "', '" +
                 lastName + "', '" +
                 address + "', '" +
                 emailAddress + "', '" +
+                phone + "', '" +
                 loyaltyLevel + "', '" +
                 membership_type + "'";
     }

@@ -1,5 +1,8 @@
 package UI.bookingMenu;
 
+import DatabaseManager.Factory.ModelDBFactory;
+import Models.ReservationModel;
+import Models.RoomModel;
 import com.jfoenix.controls.JFXComboBox;
 import com.jfoenix.controls.JFXDatePicker;
 import com.jfoenix.controls.JFXTextField;
@@ -19,7 +22,10 @@ import javafx.util.Callback;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
+
+import static DatabaseManager.Factory.ModelDBFactory.FactoryType.*;
 
 
 public class BookingMenuController implements Initializable {
@@ -76,8 +82,27 @@ public class BookingMenuController implements Initializable {
     public void calculatedPricePushed(ActionEvent event){
             this.booking_Price.setText("€");
     }
+
     @FXML
     public void bookButtonPushed(ActionEvent event) throws IOException {
+
+        ModelDBFactory dbReservation = ModelDBFactory.getModelDBFactory(Reservation);
+        ModelDBFactory dbRoom = ModelDBFactory.getModelDBFactory(Card);
+        ReservationModel reservation = new ReservationModel();
+        RoomModel room = new RoomModel();
+        int newRoomID;
+
+        LocalDate localDateCheckIn = check_in_date.getValue();
+        LocalDate localDateCheckout = check_out_date.getValue();
+
+
+        System.out.println("" + localDateCheckIn);
+        System.out.println("" + localDateCheckout);
+
+        if (dbReservation.existInDB("" + localDateCheckIn, "" + localDateCheckout)) {
+            room = (RoomModel) dbRoom.findByParameters("" + localDateCheckIn, "" + localDateCheckout);
+
+        }
         Parent PaymentPageParent = FXMLLoader.load(getClass().getResource("../paymentMenu/FXpaymentMenuView.fxml"));
         Scene PaymentPageScene = new Scene(PaymentPageParent);
         Stage primaryStage = (Stage) ((Node) event.getSource()).getScene().getWindow();

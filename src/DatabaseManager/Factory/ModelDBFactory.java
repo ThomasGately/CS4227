@@ -7,6 +7,7 @@ import Models.IModel;
 import Models.ModelFactory;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.function.Supplier;
 
 public abstract class ModelDBFactory<T> {
@@ -24,7 +25,7 @@ public abstract class ModelDBFactory<T> {
         Card, Customer, Reservation, Room
     }
 
-    public static ModelDBFactory getModelDBFactory(FactoryType type) throws Exception {
+    public static ModelDBFactory getModelDBFactory(FactoryType type) {
 
         switch (type) {
             case Card:
@@ -39,12 +40,12 @@ public abstract class ModelDBFactory<T> {
         return null;
     }
 
-    public boolean add(T item) throws Exception {
+    public boolean add(T item) {
 
         query = "INSERT INTO " + tableName +
                 " (" + modelInfo + ") " +
                 "VALUES (" + item.toString() + ");";
-        try{
+        try {
             repository.queryDatabaseStatement(query);
         } catch (Exception ex){
             ex.printStackTrace();
@@ -58,7 +59,7 @@ public abstract class ModelDBFactory<T> {
         query = "DELETE " + modelInfo + " " +
                 "FROM "   + tableName + " " +
                 "WHERE "  + tableName + "_id = " + id + ";";
-        try{
+        try {
             repository.queryDatabaseStatement(query);
         } catch (Exception ex){
             ex.printStackTrace();
@@ -71,16 +72,26 @@ public abstract class ModelDBFactory<T> {
 
         query = dQuery +
                 "WHERE "  + tableName + "_id = " + id + ";";
-        try{
-            resultSet = repository.queryDatabaseStatement(query);
-        } catch (Exception ex){
+
+        resultSet = repository.queryDatabaseStatement(query);
+
+        try {
+            if (resultSet.next()) {
+                return resultSetToModel(clazz.newInstance());
+            }
+            else {
+                return null;
+            }
+        }
+        catch (SQLException ex) {
             ex.printStackTrace();
             return null;
         }
-        return resultSetToModel(clazz.newInstance());
     }
 
-    public abstract T findByParameters(String... parameters) throws Exception;
+    public abstract boolean existInDB(String... parameters);
+
+    public abstract T findByParameters(String... parameters);
 
     protected abstract T resultSetToModel(T item) throws Exception;
 }
